@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.img-container > * {
+  width: 400px;
+}
+
+.container {
+  height: 100vh;
+  margin-inline: 1rem;
+}
+.left {
+}
