@@ -123,10 +123,10 @@ img[alt="type"] {
   transition: all 0.2s ease;
 }
 
-.background-check {
+.background-check1 {
   position: fixed;
-  /* width: 30vw; */
-  height: 50vh;
+  width: 100vw;
+  height: 100vh;
   background-color: purple;
   z-index: 100;
   left: 50%;
@@ -135,18 +135,50 @@ img[alt="type"] {
   /* height: calc(1vh * var(--scroll)); */
   filter: blur(10px);
   box-shadow: 0 0 10px purple;
+  /* transform-origin: center; */
   /* opacity: calc(0.9% * var(--scroll)); */
-  animation: autoFill 2s ease-out backwards;
+  animation: autoFill 1s ease-out forwards;
+}
+
+@keyframes autoFill1 {
+  from {
+    /* width: 0; */
+    height: 100vh;
+    background-color: purple;
+  }
+  to {
+    width: 0vw;
+    height: 100vh;
+    background-color: red;
+  }
+}
+
+.background-check {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  /* transform-origin: center; */
+  filter: blur(10px);
+  box-shadow: 0 0 110px white;
+  clip-path: circle(0% at 50% 50%);
+  animation: autoFill 2s ease-in-out forwards;
 }
 
 @keyframes autoFill {
   from {
-    width: 100vw;
-    height: 100vh;
+    clip-path: circle(0% at 50% 50%);
+    background-color: white;
+    opacity: 1;
   }
   to {
-    width: 0;
-    height: 100vh;
+    clip-path: circle(150% at 50% 50%);
+    background-color: transparent;
+    opacity: 0;
+    /* display: none; */
   }
 }
 
@@ -157,4 +189,31 @@ img[alt="type"] {
 
 .active-slide {
   transform: translate(0) !important;
+}
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 1000; /* Ensures it covers the page */
+  clip-path: circle(
+    150% at 50% 50%
+  ); /* Start with a circle that covers the entire screen */
+  animation: fadeOut 2s ease-out forwards; /* Shrink and fade out the overlay */
+}
+
+/* Keyframes for shrinking and fading */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    clip-path: circle(0% at 50% 50%); /* Circle shrinks to the center */
+  }
+  100% {
+    opacity: 0;
+    clip-path: circle(
+      150% at 50% 50%
+    ); /* Full circle, covering the whole screen */
+  }
 }

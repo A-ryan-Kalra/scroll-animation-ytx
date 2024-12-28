@@ -67,3 +67,13 @@ const observer1 = new IntersectionObserver((entries) => {
 document
   .querySelectorAll("[data-img-to-show-new]")
   .forEach((section) => observer1.observe(section));
+
+// let count = 200;
+// const timer = setInterval(() => {
+//   document.querySelector(".background-check").style.filter = `blur(${count}px)`;
+//   document.querySelector(".background-check").style.opacity = `${count / 200}`;
+//   count--;
+//   if (count > 200) {
+//     clearInterval(timer);
+//   }
+// }, 50);
