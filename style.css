@@ -86,37 +86,75 @@ img[alt="deploy"] {
   position: fixed;
   width: 400px;
   z-index: 100;
+  /* bottom: 150%; */
   right: 0;
-  top: 10%;
-  translate: calc(-1% * var(--scrollZ)) calc(1% * var(--scrollZ));
+  /* top: 10%; */
+  /* translate: calc(-1% * var(--scrollZ)) calc(1% * var(--scrollZ)); */
+  translate: 0 calc(1% * var(--scrollZ));
+  transition: all 0.2s ease;
   /* rotate: calc(1 * var(--scrollZ) deg); */
-  transform: rotate(calc(1deg * var(--scrollZ)));
+  /* transform: rotate(calc(1deg * var(--scrollZ))); */
   /* opacity: calc(1% * var(--scroll)); */
+}
+img[alt="card"] {
+  position: fixed;
+  width: 400px;
+  z-index: 100;
+  right: 0;
+  translate: 0 calc(1% * var(--scrollZ));
+  transition: all 0.2s ease;
+}
+img[alt="modal"] {
+  position: fixed;
+  width: 400px;
+  z-index: 100;
+  right: 0;
+  bottom: 100%;
+  translate: 0 calc(1% * var(--scrollZ));
+  transition: all 0.2s ease;
+}
+img[alt="type"] {
+  position: fixed;
+  width: 400px;
+  bottom: 2100px;
+  z-index: 100;
+  right: 0;
+  translate: 0 calc(1% * var(--scrollZ));
+  transition: all 0.2s ease;
 }
 
 .background-check {
   position: fixed;
   /* width: 30vw; */
   height: 50vh;
-  background-color: blue;
+  background-color: purple;
   z-index: 100;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(1vw * var(--scroll));
-  height: calc(1vh * var(--scroll));
+  /* width: calc(1vw * var(--scroll)); */
+  /* height: calc(1vh * var(--scroll)); */
   filter: blur(10px);
-  box-shadow: 0 0 10px blue;
+  box-shadow: 0 0 10px purple;
   /* opacity: calc(0.9% * var(--scroll)); */
-  animation: autoFill 4s ease forwards;
+  animation: autoFill 2s ease-out backwards;
 }
 
 @keyframes autoFill {
   from {
-    width: 0;
-    height: 0;
-  }
-  to {
     width: 100vw;
     height: 100vh;
   }
+  to {
+    width: 0;
+    height: 100vh;
+  }
+}
+
+.container > img {
+  /* translate: 100% 0; */
+  transform: translate(100%, 0);
+}
+
+.active-slide {
+  transform: translate(0) !important;
 }

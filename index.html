@@ -13,7 +13,16 @@
         <img src="imgs/img-2.png" alt="img-2" data-img id="img2" />
         <img src="imgs/img-3.png" alt="img-3" data-img id="img3" />
       </div>
-      <img src="/imgs/deploy.png" alt="deploy" />
+      <img
+        src="/imgs/env-card.png"
+        alt="card"
+        data-img-new
+        class="active-slide"
+      />
+      <img src="/imgs/deploy.png" alt="deploy" data-img-new />
+      <img src="/imgs/modal.png" alt="modal" data-img-new />
+      <img src="/imgs/type.png" alt="type" data-img-new />
+
       <div class="background-check"></div>
       <section id="home" class="home">
         <div class="left">
@@ -36,6 +45,7 @@
         <h1>Completely Visual</h1>
         <p>Never touch the command line, from provision to production.</p>
         <div data-img-to-show="#img1"></div>
+        <div data-img-to-show-new="card"></div>
       </section>
       <section id="stack" class="stack">
         <h1>Full Stack</h1>
@@ -44,12 +54,20 @@
           APIs, deployments, hosting, etc.
         </p>
         <div data-img-to-show="#img2"></div>
+        <div data-img-to-show-new="modal"></div>
       </section>
 
       <section class="faster">
         <h1>Launch Faster</h1>
         <p>Logical can get systems to market in minutes instead of weeks.</p>
         <div data-img-to-show="#img3"></div>
+        <div data-img-to-show-new="deploy"></div>
+      </section>
+      <section class="faster">
+        <h1>Launch Quicker</h1>
+        <p>Logical can get systems to market in minutes instead of weeks.</p>
+        <div data-img-to-show="#img1"></div>
+        <div data-img-to-show-new="type"></div>
       </section>
     </div>
     <script src="script.js"></script>

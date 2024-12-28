@@ -31,8 +31,9 @@ const observer = new IntersectionObserver((entries) => {
       document
         .querySelectorAll("[data-img]")
         .forEach((img) => img.classList.remove("show"));
+      // console.log(document.querySelectorAll(".container > img"));
       const img = document.querySelector(entry.target.dataset.imgToShow);
-      // console.log(img);
+      console.log(img);
       img.classList.add("show");
       break;
     }
@@ -42,3 +43,27 @@ const observer = new IntersectionObserver((entries) => {
 document
   .querySelectorAll("[data-img-to-show]")
   .forEach((section) => observer.observe(section));
+
+const observer1 = new IntersectionObserver((entries) => {
+  // console.log(entries);
+  for (let i = entries.length - 1; i >= 0; i--) {
+    const entry = entries[i];
+
+    if (entry.isIntersecting) {
+      document
+        .querySelectorAll("[data-img-new]")
+        .forEach((img) => img.classList.remove("active-slide"));
+      // console.log(entry.target);
+      const img = document.querySelector(
+        `img[alt="${entry.target.dataset.imgToShowNew}"]`
+      );
+      console.log(img);
+      img.classList.add("active-slide");
+      break;
+    }
+  }
+});
+
+document
+  .querySelectorAll("[data-img-to-show-new]")
+  .forEach((section) => observer1.observe(section));
