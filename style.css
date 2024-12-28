@@ -53,7 +53,8 @@ section {
   padding: 2rem;
   display: flex;
   flex: 1;
-  background-color: #a2a7a7;
+  background-color: rgb(162, 167, 167, var(--background-opacity));
+  --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
   height: 100%;
 }
 .visual,
