@@ -157,13 +157,13 @@ img[alt="type"] {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background-color: white;
-  z-index: 100;
+  background-color: black;
+  z-index: 110;
   top: 0;
   left: 0;
   /* transform-origin: center; */
   filter: blur(10px);
-  box-shadow: 0 0 110px white;
+  box-shadow: 0 0 110px black;
   clip-path: circle(0% at 50% 50%);
   animation: autoFill 2s ease-in-out forwards;
 }
@@ -171,7 +171,7 @@ img[alt="type"] {
 @keyframes autoFill {
   from {
     clip-path: circle(0% at 50% 50%);
-    background-color: white;
+    background-color: black;
     opacity: 1;
   }
   to {
@@ -215,5 +215,43 @@ img[alt="type"] {
     clip-path: circle(
       150% at 50% 50%
     ); /* Full circle, covering the whole screen */
+  }
+}
+
+.left1,
+.right1 {
+  position: fixed;
+  background-color: rgb(163, 119, 119);
+  height: 100vh;
+  z-index: 100;
+}
+.left1 {
+  width: 50vw;
+  animation: fadeOutfromLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.right1 {
+  width: 50vw;
+  left: 50%;
+  animation: fadeOutfromRight 1s ease forwards;
+  animation-delay: 1s;
+  /* transform-origin: left; */
+}
+@keyframes fadeOutfromLeft {
+  0% {
+    width: 50vw;
+  }
+  100% {
+    width: 0;
+  }
+}
+@keyframes fadeOutfromRight {
+  0% {
+    width: 50vw;
+    left: 50%; /* Start the right side from the center */
+  }
+  100% {
+    width: 0;
+    left: 100%; /* Start the right side from the center */
   }
 }
