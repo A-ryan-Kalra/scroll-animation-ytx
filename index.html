@@ -9,11 +9,12 @@
   <body>
     <div class="container">
       <div class="imgs-list">
-        <img src="imgs/img-1.png" alt="img-1" />
-        <img src="imgs/img-2.png" alt="img-2" />
-        <img src="imgs/img-3.png" alt="img-3" />
+        <img src="imgs/img-1.png" alt="img-1" data-img id="img1" class="show" />
+        <img src="imgs/img-2.png" alt="img-2" data-img id="img2" />
+        <img src="imgs/img-3.png" alt="img-3" data-img id="img3" />
       </div>
-
+      <img src="/imgs/deploy.png" alt="deploy" />
+      <div class="background-check"></div>
       <section id="home" class="home">
         <div class="left">
           <h1 class="title">Build Better <br />Backends</h1>
@@ -23,17 +24,18 @@
           </p>
         </div>
         <div class="right">
-          <!-- <div class="img-container">
-            <img src="/imgs/deploy.png" alt="deploy" />
-            <img src="/imgs/env-card.png" alt="card" />
+          <div class="img-container">
+            <!-- <img src="/imgs/deploy.png" alt="deploy" /> -->
+            <!-- <img src="/imgs/env-card.png" alt="card" />
             <img src="/imgs/modal.png" alt="modal" />
-            <img src="/imgs/type.png" alt="type" />
-          </div> -->
+            <img src="/imgs/type.png" alt="type" /> -->
+          </div>
         </div>
       </section>
       <section id="visual" class="visual">
         <h1>Completely Visual</h1>
         <p>Never touch the command line, from provision to production.</p>
+        <div data-img-to-show="#img1"></div>
       </section>
       <section id="stack" class="stack">
         <h1>Full Stack</h1>
@@ -41,6 +43,13 @@
           Never manage infrastructure again. One click gets you: a database,
           APIs, deployments, hosting, etc.
         </p>
+        <div data-img-to-show="#img2"></div>
+      </section>
+
+      <section class="faster">
+        <h1>Launch Faster</h1>
+        <p>Logical can get systems to market in minutes instead of weeks.</p>
+        <div data-img-to-show="#img3"></div>
       </section>
     </div>
     <script src="script.js"></script>
