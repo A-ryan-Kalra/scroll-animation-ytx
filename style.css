@@ -18,7 +18,7 @@
   position: sticky;
   top: 0;
   /* transform: translate(0, calc(1% * var(--scroll))); */
-  /* opacity: calc((100% - 1% * (max(var(--scroll), 30) - 30) * 100 / 30)); */
+  opacity: calc((100% - 1% * (max(var(--scroll), 30) - 30) * 100 / 30));
   translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
   /* transition: translate 0.5s ease; */
 }
