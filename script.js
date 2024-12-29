@@ -5,7 +5,7 @@ function setScrollVar() {
   const percentOfHeightScrolled =
     htmlElement.scrollTop / htmlElement.clientHeight;
   // console.log(htmlElement.scrollTop);
-  console.log(htmlElement.scrollTop / htmlElement.clientHeight);
+  // console.log(htmlElement.scrollTop / htmlElement.clientHeight);
   htmlElement.style.setProperty(
     "--scroll",
     Math.min(percentOfHeightScrolled * 100, 100)
@@ -34,7 +34,7 @@ const observer = new IntersectionObserver((entries) => {
         .forEach((img) => img.classList.remove("show"));
       // console.log(document.querySelectorAll(".container > img"));
       const img = document.querySelector(entry.target.dataset.imgToShow);
-      console.log(img);
+      // console.log(img);
       img.classList.add("show");
       break;
     }
@@ -58,7 +58,7 @@ const observer1 = new IntersectionObserver((entries) => {
       const img = document.querySelector(
         `img[alt="${entry.target.dataset.imgToShowNew}"]`
       );
-      console.log(img);
+      // console.log(img);
       img.classList.add("active-slide");
       break;
     }
