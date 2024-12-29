@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 :root {
   --scroll: 0;
@@ -234,9 +234,9 @@ img[alt="type"] {
   animation-delay: 1s;
 }
 .right1 {
-  width: 51vw;
+  width: 53vw;
   left: 50%;
-  translate: -1% 0;
+  translate: -2% 0;
   animation: fadeOutfromRight 1s ease forwards;
   animation-delay: 1s;
   /* transform-origin: left; */
@@ -251,7 +251,7 @@ img[alt="type"] {
 }
 @keyframes fadeOutfromRight {
   0% {
-    width: 50vw;
+    width: 55vw;
     left: 50%; /* Start the right side from the center */
   }
   100% {
