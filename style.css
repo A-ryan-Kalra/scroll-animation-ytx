@@ -232,8 +232,9 @@ img[alt="type"] {
   animation-delay: 1s;
 }
 .right1 {
-  width: 50vw;
+  width: 51vw;
   left: 50%;
+  translate: -1% 0;
   animation: fadeOutfromRight 1s ease forwards;
   animation-delay: 1s;
   /* transform-origin: left; */
@@ -268,7 +269,7 @@ img[alt="type"] {
     font-size: 1.2rem;
   }
   section {
-    padding: 0.5rem;
+    padding: 1rem;
   }
   .container > img {
     width: 300px;
