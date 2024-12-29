@@ -268,9 +268,9 @@ img[alt="type"] {
   p {
     font-size: 1.2rem;
   }
-  section {
+  /* section {
     padding: 1rem;
-  }
+  } */
   .container > img {
     width: 300px;
     /* position: relative; */
