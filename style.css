@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
-  overflow-x: hidden;
-}
+
 :root {
   --scroll: 0;
   --scrollZ: 40;
@@ -162,8 +160,8 @@ img[alt="type"] {
   height: 100vh;
   background-color: black;
   z-index: 110;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
   /* transform-origin: center; */
   filter: blur(10px);
   box-shadow: 0 0 110px black;
@@ -236,7 +234,7 @@ img[alt="type"] {
 .right1 {
   width: 53vw;
   left: 50%;
-  translate: -2% 0;
+  translate: -3% 0;
   animation: fadeOutfromRight 1s ease forwards;
   animation-delay: 1s;
   /* transform-origin: left; */
