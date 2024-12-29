@@ -4,7 +4,8 @@ function setScrollVar() {
   const htmlElement = document.documentElement;
   const percentOfHeightScrolled =
     htmlElement.scrollTop / htmlElement.clientHeight;
-
+  // console.log(htmlElement.scrollTop);
+  console.log(htmlElement.scrollTop / htmlElement.clientHeight);
   htmlElement.style.setProperty(
     "--scroll",
     Math.min(percentOfHeightScrolled * 100, 100)

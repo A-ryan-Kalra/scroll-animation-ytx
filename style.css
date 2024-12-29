@@ -222,7 +222,7 @@ img[alt="type"] {
 .left1,
 .right1 {
   position: fixed;
-  background-color: rgb(163, 119, 119);
+  background-color: rgb(210, 209, 173);
   height: 100vh;
   z-index: 100;
 }
@@ -254,5 +254,24 @@ img[alt="type"] {
   100% {
     width: 0;
     left: 100%; /* Start the right side from the center */
+  }
+}
+@media screen and (max-width: 1200px) {
+  .right {
+    flex: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 4.3rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  section {
+    margin-inline: 1rem;
+  }
+  .container > img {
+    width: 300px;
+    /* position: relative; */
   }
 }
